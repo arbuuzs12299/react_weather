@@ -11,6 +11,8 @@ const SearchCity = () => {
 
 export default SearchCity;
 
+console.log();
+
 const inputField = {
   display: 'flex',
   alignItems: 'center',
