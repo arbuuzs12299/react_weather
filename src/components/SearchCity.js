@@ -2,14 +2,18 @@ import { useState } from 'react';
 
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
-const SearchCity = () => {
-  const [inputValue, setInputValue] = useState(null);
-  const [search, setSearch] = useState(null);
+const SearchCity = ({ citySearchHandler }) => {
+  const [inputValue, setInputValue] = useState('');
+  const [city, setCity] = useState('');
 
   const searchHandler = () => {
-    setSearch(() => inputValue);
-    setInputValue(() => '');
+    setCity(() => inputValue);
+
+    citySearchHandler(city);
+
+    // setInputValue(() => '');
   };
+
   return (
     <div style={inputField}>
       <input

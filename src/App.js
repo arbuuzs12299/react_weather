@@ -21,11 +21,15 @@ function App() {
     </video>
   );
 
+  const citySearchHandler = (city) => {
+    console.log(city);
+  };
+
   return (
     <div style={wrapper}>
       {bgVideoSnow}
       <div style={searchField}>
-        <SearchCity />
+        <SearchCity citySearchHandler={citySearchHandler} />
       </div>
     </div>
   );
