@@ -11,24 +11,12 @@ const SearchCity = () => {
 
 export default SearchCity;
 
-const searchField = {
-  display: 'flex',
-  //   alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: '10px',
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  color: '#000000',
-  height: '400px',
-  width: '400px',
-  border: '1px solid #000000',
-};
-
 const inputField = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   height: 'max-content',
-  marginTop: '30px',
+  margin: '30px',
   padding: '5px',
   backgroundColor: '#ffffff',
   borderRadius: '5px',

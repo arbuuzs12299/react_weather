@@ -1,8 +1,29 @@
 import SearchCity from './components/SearchCity';
 
+import clear from './assets/clear.mp4';
+import rain from './assets/rain.mp4';
+import snow from './assets/snow.mp4';
+
 function App() {
+  const bgVideoClear = (
+    <video autoPlay loop muted style={video}>
+      <source src={clear} />
+    </video>
+  );
+  const bgVideoRain = (
+    <video autoPlay loop muted style={video}>
+      <source src={rain} />
+    </video>
+  );
+  const bgVideoSnow = (
+    <video autoPlay loop muted style={video}>
+      <source src={snow} />
+    </video>
+  );
+
   return (
     <div style={wrapper}>
+      {bgVideoSnow}
       <div style={searchField}>
         <SearchCity />
       </div>
@@ -11,6 +32,15 @@ function App() {
 }
 
 export default App;
+
+const video = {
+  position: 'fixed',
+  right: '0',
+  bottom: '0',
+  minWidth: '100%',
+  minHeight: '100%',
+  zIndex: '-10',
+};
 
 const wrapper = {
   display: 'flex',
